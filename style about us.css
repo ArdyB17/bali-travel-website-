@@ -1,0 +1,607 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display&display=swap');
+:root {
+
+    /**
+     * colors
+     */
+    
+    --united-nations-blue: hsl(214, 56%, 58%);
+    --bright-navy-blue: hsl(214, 57%, 51%);
+    --spanish-gray: hsl(0, 0%, 60%);
+    --black-coral: hsl(225, 8%, 42%);
+    --oxford-blue: hsl(208, 97%, 12%);
+    --yale-blue: hsl(214, 72%, 33%);
+    --blue-ncs: hsl(197, 100%, 36%);
+    --gunmetal: hsl(206, 34%, 20%);
+    --gainsboro: hsl(0, 0%, 88%);
+    --cultured: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --onyx: hsl(0, 0%, 25%);
+    --jet: hsl(0, 0%, 20%);
+    
+    /**
+     * typography
+     */
+    
+    --ff-poppins: "Poppins", sans-serif;
+    --ff-montserrat: "Montserrat", sans-serif;
+    
+    --fs-1: calc(20px + 3.5vw);
+    --fs-2: calc(18px + 1.6vw);
+    --fs-3: calc(16px + 0.45vw);
+    --fs-4: 15px;
+    --fs-5: 14px;
+    --fs-6: 13px;
+    --fs-7: 12px;
+    --fs-8: 11px;
+    
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+    --fw-800: 800;
+    
+    /**
+     * transition
+     */
+    
+    --transition: 0.25s ease-in-out;
+    
+    /**
+     * spacing
+     */
+    
+    --section-padding: 60px;
+    
+    /**
+     * border-radius
+     */
+    
+    --radius-15: 15px;
+    --radius-25: 25px;
+    
+    }
+    
+    
+    
+    
+    
+    /*-----------------------------------*\
+    
+    \*-----------------------------------*/
+    
+    *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+    li { list-style: none; }
+    
+    a { text-decoration: none; }
+    
+    a,
+    img,
+    span,
+    input,
+    label,
+    button,
+    ion-icon {display: block;}
+    
+    input,
+    button {
+    background: none;
+    border: none;
+    font: inherit;
+    }
+    
+    button { cursor: pointer; }
+    
+    input { width: 100%; }
+    
+    ion-icon { pointer-events: none; }
+    
+    html {
+    font-family: var(--ff-poppins);
+    scroll-behavior: smooth;
+    }
+    
+    body { background: var(--white); }
+    
+    /*-----------------------------------*\
+    * #REUSED STYLE
+    \*-----------------------------------*/
+    
+    .container { padding-inline: 15px; }
+    
+    .btn {
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: var(--fs-5);
+    border-radius: 100px;
+    padding: var(--padding, 8px 18px);
+    border: var(--border-width, 2px) solid transparent;
+    transition: var(--transition);
+    }
+    
+    .btn-primary {
+    background: var(--bright-navy-blue);
+    border-color: var(--bright-navy-blue);
+    }
+    
+    .btn-primary:is(:hover, :focus) {
+    background: var(--yale-blue);
+    border-color: var(--yale-blue);
+    }
+    
+    .btn-secondary { border-color: var(--white); }
+    
+    .btn-secondary:is(:hover, :focus) { background: hsla(0, 0%, 100%, 0.1); }
+    
+    .h1,
+    .h2,
+    .h3 {
+    font-weight: var(--fw-800);
+    font-family: var(--ff-montserrat);
+    text-transform: uppercase;
+    }
+    
+    .h1 {
+    color: var(--white);
+    font-size: var(--fs-1);
+    }
+    
+    .h2,
+    .h3 { color: #232946; }
+    
+    .h2 { font-size: 40px; }
+    
+    .h3 {
+    font-size: var(--fs-3);
+    font-weight: var(--fw-700);
+    }
+    
+    .section-subtitle {
+    color: var(--bright-navy-blue);
+    font-size: var(--fs-5);
+    text-transform: uppercase;
+    font-family: var(--ff-montserrat);
+    margin-bottom: 8px;
+    }
+    
+    .section-title { margin-bottom: 15px; }
+    
+    .section-text {
+    color: var(--black-coral);
+    margin-bottom: 30px;
+    }
+    
+    .card-text {
+    color: var(--black-coral);
+    font-size: var(--fs-5);
+    }
+    
+    
+    /*-----------------------------------*\
+    *          First Page
+    \*-----------------------------------*/
+    
+    .hero {
+    background-image: url("gambar/pura\ yang\ hd.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: hsla(0, 0%, 0%, 0.7);
+    background-blend-mode: overlay;
+    display: grid;
+    place-items: center;
+    min-height: 600px;
+    text-align: center;
+    padding-top: 125px;
+    }
+    
+    .hero-title { margin-bottom: 36px; }
+    
+    .hero-text {
+    color: #fef6e4;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family: 'Roboto Mono', monospace;
+    }
+    
+    .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    }
+    
+    
+    /*-----------------------------------*\
+    * #POPULAR Destination In Bali
+  */
+    
+    .popular { padding-block: var(--section-padding); }
+    
+    .popular-list,
+    .popular-list > li:not(:last-child) { margin-bottom: 30px; }
+    
+    .popular-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-25);
+    height: 500px;
+    }
+    
+    .popular-card .card-img { height: 100%; }
+    
+    .popular-card .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+    
+    .popular-card .card-content {
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
+    right: 40px;
+    background: #bae8e8;
+    border-radius: var(--radius-25);
+    padding: 16px;
+    }
+    
+    
+    .popular-card .card-rating {
+    background: #232946;
+    color: #fffffe;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    transform: translateY(-50%);
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    }
+    
+    .popular-card .card-subtitle {
+    color: var(--blue-ncs);
+    font-size: large;
+    
+    margin-bottom: 8px;
+    }
+    
+    .popular-card .card-title { margin-bottom: 5px; }
+    
+    .popular-card :is(.card-subtitle, .card-title) > a { color: inherit; }
+    
+    .popular .btn { margin-inline: auto; }
+    
+    
+    
+  
+    /*-----------------------------------*\
+    * #MEDIA QUERIES
+    \*-----------------------------------*/
+    
+    /**
+    * responsive for larger than 580px screen
+    */
+
+    
+
+    
+    @media (min-width: 580px) {
+    
+    /**
+     * REUSED STYLE
+     */
+    
+    .container {
+      max-width: 580px;
+      margin-inline: auto;
+    }
+    
+    .btn {
+      --fs-5: 16px;
+      --padding: 12px 30px;
+    }
+    
+    section:not(.cta) :is(.section-subtitle, .section-title, .section-text) {
+      text-align: center;
+    }
+    
+    .section-text { margin-bottom: 40px; }
+    
+    .card-text { --fs-5: 15px; }
+    
+    /**
+     * POPULAR
+     */
+    
+    .popular-card .card-content { right: auto; }
+    
+    
+  /**
+    * responsive for larger than 768px screen
+    */
+    
+    @media (min-width: 768px) {
+    }
+    
+    /**
+     * 
+     */
+    
+    
+     /**
+     * POPULAR DESTINATIONNNN                       */
+    
+    .popular-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+    
+    .popular-list > li:not(:last-child) { margin-bottom: 0; }
+    
+    .popular-card .card-content { right: 20px; }
+    
+      /**
+     * FOOTER
+     */
+    
+   
+    
+    .footer-form .input-field { margin-bottom: 0; }
+    
+    .footer-form .btn { width: max-content; }
+    
+    }
+    
+    
+    
+    
+
+    
+    @media (min-width: 1000px) {
+    
+    /**                          */
+    
+    .container { max-width: 2000px; }
+    
+    /**             u fuckingh bastard nigga                     */
+    
+    
+    
+    
+ 
+     /* POPULAR
+     */
+    
+    .popular-list { grid-template-columns: repeat(2, 1fr); }
+    
+    
+    
+   
+    
+    
+    
+    
+  /**
+     * Our service
+     */
+    
+    .container { max-width: 2000px; }
+    
+    }
+   
+    
+    
+    
+    
+                      /*=================================================================*/
+                     /*                          Our Team                               */
+                    /*=================================================================*/
+    .theme-text {
+      color:#0196e3;
+    }
+    
+    .card-img-top {
+      height: 200px;
+      width: 100%;
+    }
+    .card {
+      z-index: 1;
+      overflow: hidden;
+      transition: 0.5s;
+      
+    }
+    .card:hover {
+      color: white;
+    }
+   
+    .card:hover::before {
+      left: 0%;
+      color: black;
+    }
+    .container-fluid {
+      
+      background-position: center;
+      background-size: cover;
+    }
+    .container
+    {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-wrap: wrap;
+    }
+    .container .card
+    {
+       width: 330px;
+       height: 416px;
+       padding: 60px 30px;
+       margin: 20px;
+       background: #e3f6f5;
+       box-shadow: 0.6em 0.6em 1.2em #d2dce9,
+                   -0.5em -0.5em 1em #ffffff;
+       border-radius: 20px;
+    }
+    .container .card .content
+    {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+    }
+    .container .card .content .imgBx
+    {
+       width: 180px;
+       height: 180px;
+       border-radius: 50%;
+       position: relative;
+       margin-bottom: 20px;
+       overflow: hidden;
+    }
+    .container .card .content .imgBx img
+    {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+    }
+    .container .card .content .contentBx h4
+    {
+       color: #0f0e17;
+       font-size: 1.7rem;
+       font-weight: bold;
+       text-align: center;
+       letter-spacing: 1px;
+    }
+    .container .card .content .contentBx h5 /*--------------------profesi----------------------*/
+    {
+       color: #272343;
+       font-size: 1.3rem;
+       font-weight: bold;
+       text-align: center;
+    }
+    .container .card .content .sci
+    {
+       margin-top: 20px;
+    }
+    .container .card .content .sci a
+    {
+       text-decoration: none;
+       color: #6c758f;
+       font-size: 30px;
+       margin: 10px;
+       transition: color 0.4s;
+    }
+    .container .card .content .sci a:hover
+    {
+       color: #0196e3;
+    }
+                    /*=====================================================*/
+                    /*                     Our Service                    */
+                    /*===================================================*/
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .row h1 {
+      width: 100%;
+      text-align: center;
+      font-size: 60px;
+      margin: 0.6em 0;
+      font-weight: 1000;
+      color: #272343;
+    }
+    .column {
+      padding: 1em;
+    }
+    .card {
+      padding: 100px;
+      text-align: center;
+      
+      background: linear-gradient(0deg, #c3ff00 900px, transparent 900px);
+      background-repeat: no-repeat;
+      background-position: 0 50em;
+      box-shadow: 0 0 2.5em rgba(0, 0, 0, 0.15);
+      border-radius: 60px;
+      transition: 1.5s;
+      
+    }
+    .card {
+
+      padding: 20px;
+      background-color: white;
+      border-radius: 60px;
+      text-align: center;
+    }
+    .card .icon {
+      font-size: 2.5em;
+      height: 3em;
+      width: 3em;
+      margin: auto;
+      background-color: #172c66;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: #fef6e4;
+    }
+    .icon:before {
+      position: absolute;
+      
+      height: 1.5em;
+      width: 1.5em;
+      border: 0.12em solid #397ef6;
+      border-radius: 50%;
+      transition: 0.5s;
+    }
+    .card h3 {
+      font-size: 1.5em;
+      margin: 1em 0 1.4em 0;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      color: #070024;
+    }
+    .card p {
+      line-height: 1em;
+      color: #172c66;
+      font-size: 20px;
+    }
+    .card:hover {
+      background-position: 0;
+    }
+    
+    @media screen and (min-width: 768px) {
+      section {
+        padding: 1em 7em;
+      }
+    }
+    @media screen and (min-width: 992px) {
+      section {
+        padding: 1em;
+      }
+      .card {
+        padding: 5em 2em;
+      }
+      .column {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+        padding: 0 1em;
+      }
+    }
+  /*-------------------------------------------------------------*/
+  /*-------------------------Things To do ----------------------*/
+  /*-----------------------------------------------------------*/
+
+ 

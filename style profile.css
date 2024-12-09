@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style: none;
+	text-transform: capitalize;
+	border: none;
+	outline: none;
+	transition: all 0.5s ease-out 0s;
+}
+
+:root {
+	--green: #1bbca8;
+	--white: #fff;
+	--dark-white: #cccccc;
+	--black: #232323;
+	--light-black: #777777;
+	--border: 1px solid #1bbca8;
+	--box-shadow: 0 0 0.7rem 0 #777777;
+}
+*::selection {
+	background: var(--green);
+	color: var(--white);
+}
+html {
+	font-size: 62.5%;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+section {
+	padding: 5% 10%;
+}
+.btn {
+	background: none;
+	display: inline-block;
+	color: var(--white);
+	padding: 1.5rem 3rem;
+	border: var(--border);
+	margin: 2rem 0;
+	font-size: 1.6rem;
+}
+.btn:hover {
+	background: var(--green);
+}
+.heading {
+	padding: 3rem 0;
+}
+.heading h1 {
+	font-size: 4rem;
+	color: var(--black);
+	letter-spacing: 0.3rem;
+}
+.heading p {
+	font-size: 1.5rem;
+	color: var(--black);
+	padding: 1rem 0;
+}
+/* header start  */
+
+.header .container {
+	position: fixed;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2% 10%;
+	background: none;
+}
+
+
+/* header end  */
+
+/* home start  */
+.home {
+	background: url(./gambar/np\ 3.jpg);
+	height: 600px;
+	background-size: cover;
+	
+	text-align: center;
+	
+	
+ 
+    background-color: hsla(0, 0%, 0%, 0.7);
+    background-blend-mode: overlay;
+    
+    min-height: 600px;
+    text-align: center;
+    padding-top: 125px;
+}
+.home .content {
+	padding-top: 15rem;
+}
+.home .content h3 {
+	font-size: 5rem;
+	color: #fffffe;
+	font-weight: 500;
+}
+.home .content h1 {
+	font-size: 5rem;
+	font-weight: bolder;
+	color: #fffffe;
+	padding: 2rem 0;
+	
+}
+.home .content p {
+	font-size: 2.4rem;
+	font-weight: 400;
+	color: var(--white);
+	letter-spacing: 0.3rem;
+}
+.home .content p span {
+	color: var(--green);
+}
+/* home start  */
+
+/* about start  */
+.about .container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	gap: 3rem;
+	align-items: flex-start;
+	overflow-x: overlay;
+}
+.about .container .image {
+	position: relative;
+	overflow: hidden;
+
+}
+.about .container .image:hover .overlay {
+	top: 0;
+}
+.about .container .image img {
+	width: 90%;
+	border-radius: 30px;
+}
+
+
+.about .container .content .column .details {
+	display: flex;
+	flex-direction: column;
+	
+}
+
+.about .container .content .column .details p {
+	color: #1f1235;
+	font-size: 19px;
+	line-height: 3.3rem;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.about .container .content .column .details.active,
+.about .container .content .column .skills.active {
+	display: flex;
+	justify-content: right;
+}
+
+
+/*										 project  */
+.projects-counter {
+	background: #d1d1e9;
+}
+.projects-counter .box-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+	gap: 3rem;
+	text-align: center;
+	padding: 3rem 0;
+}
+.projects-counter .box-container .box {
+	display: grid;
+	gap: 2rem;
+	padding: 5rem;
+	
+}
+.projects-counter .box-container .box:not(:first-child) {
+	border-left: var(--border);
+}
+.projects-counter .box-container .box i {
+	font-size: 3.2rem;
+	color: #6246ea;
+}
+.projects-counter .box-container .box span {
+	font-size: 2.3rem;
+	color: #2b2c34;
+}
+.projects-counter .box-container .box h3 {
+	font-size: 1.8rem;
+	color: #2b2c34;
+	font-weight: 400;
+}
+ 
+
+/* why you have to choose us */
+.services .box-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	gap: 3rem;
+	text-align: center;
+	align-items: center;
+	
+}
+.services .box-container .box {
+	display: grid;
+	gap: 1.5rem;
+	padding: 2.5rem;
+	border: 1px solid rgba(230, 230, 230, 1);
+	background-color: #fffffe;
+}
+.services .box-container .box:hover {
+	background: var(--white);
+	box-shadow: var(--box-shadow);
+	margin-top: 0.3rem;
+}
+.services .box-container .box:hover i {
+	color: var(--green);
+}
+.services .box-container .box i {
+	color: var(--black);
+	font-size: 3.2rem;
+	margin-bottom: 1.7rem;
+}
+.services .box-container .box h3 {
+	font-size: 1.8rem;
+	color: var(--black);
+	font-weight: 400;
+}
+.services .box-container .box p {
+	font-size: 1.7rem;
+	color: var(--light-black);
+	line-height: 2.5rem;
+	font-weight: 500;
+}
+/* services end  */
+
+
+
+/* portfolio start  */
+.portfolio .box-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+	gap: 3rem;
+	padding-top: 5rem;
+}
+.portfolio .box-container .box {
+	position: relative;
+}
+.portfolio .box-container .box:hover .content {
+	transform: scale(1);
+}
+.portfolio .box-container .image img {
+	width: 100%;
+}
+.portfolio .box-container .box .content {
+	position: absolute;
+	background: rgba(255, 255, 255, 0.9);
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	padding: 8rem 3rem;
+	transform: scale(0);
+}
+.portfolio .box-container .box .content i {
+	font-size: 3.2rem;
+	color: var(--green);
+	margin-bottom: 1.7rem;
+}
+.portfolio .box-container .box .content h3 {
+	font-size: 1.8rem;
+	color: var(--black);
+	font-weight: 400;
+	margin: 1.5rem 0;
+}
+.portfolio .box-container .box .content span {
+	font-size: 1.7rem;
+	color: var(--light-black);
+	line-height: 2.5rem;
+	font-weight: 500;
+}
+/* portfolio end  */
+
+/* testimonials start  */
+.testimonials {
+	background: var(--black);
+	text-align: center;
+}
+.testimonials .testimonials-slider {
+	display: flex;
+	justify-content: center;
+	padding: 5rem 0;
+}
+.testimonials .testimonials-slider .slide .quote i {
+	font-size: 8rem;
+	color: var(--white);
+}
+.testimonials .testimonials-slider .slide .image img {
+	width: 12rem;
+	border-radius: 50%;
+	padding: 2rem 0;
+}
+.testimonials .testimonials-slider .slide p {
+	color: var(--light-black);
+	font-size: 1.8rem;
+	line-height: 3rem;
+	letter-spacing: 0.1rem;
+	padding: 1.5rem 0;
+}
+.testimonials .testimonials-slider .slide span {
+	font-size: 2rem;
+	color: var(--white);
+}
+/* testimonials end  */
+
+/* info start  */
+.info .box-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+	gap: 3rem;
+	text-align: center;
+}
+.info .box-container .box {
+	padding: 4rem;
+}
+.info .box-container .box i {
+	font-size: 3rem;
+	color: var(--green);
+}
+.info .box-container .box h3 {
+	font-size: 1.6rem;
+	color: var(--black);
+	font-weight: 600;
+	text-transform: uppercase;
+	padding-top: 1.5rem;
+	padding-bottom: 1rem;
+}
+.info .box-container .box span {
+	font-size: 1.5rem;
+	color: var(--light-black);
+}
+/* info end  */
+
+/* contact start  */
+.contact {
+	background: var(--black);
+}
+.contact .heading h1,
+.contact .heading p {
+	color: var(--white);
+}
+.contact .row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+}
+.contact .row .map {
+	flex: 1 1 42rem;
+	width: 100%;
+	padding: 2rem;
+	box-shadow: var(--box-shadow);
+}
+.contact .row form {
+	padding: 2rem;
+	flex: 1 1 42rem;
+	box-shadow: var(--box-shadow);
+	text-align: center;
+}
+.contact .row form h3{
+	font-size: 3rem;
+	color: var(--white);
+	padding-bottom: 1rem;
+}
+.contact .row form .box{
+	width: 100%;
+	padding: 1.5rem;
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	margin: 0.7rem 0;
+}
+.contact .row form textarea{
+	height: 15rem;
+	resize: none;
+}
+.contact .row form .btn{
+	width: 100%;
+}
+/* contact end  */
+
+/* footer start  */
+.footer{
+	padding: 3rem;
+}
+.footer .credit{
+	font-size: 2rem;
+	color: var(--black);
+	font-weight: 500;
+	letter-spacing: 0.3rem;
+	text-align: center;
+	line-height: 3rem;
+}
+/* footer end  */
+
+/* media query  */
+
+@media (max-width: 991px) {
+	html {
+		font-size: 55%;
+	}
+	section {
+		padding: 2% 5%;
+	}
+	.header .container {
+		padding: 2rem 5%;
+	}
+	.projects-counter .box-container .box:not(:first-child) {
+		border: none;
+	}
+}
+
+
+	.home {
+		background-position: 60% 50%;
+	}
+
+@media (max-width: 450px) {
+	html {
+		font-size: 50%;
+	}
+}
